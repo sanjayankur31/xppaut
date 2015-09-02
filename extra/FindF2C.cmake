@@ -1,0 +1,18 @@
+message(STATUS "Looking for F2C")
+
+if(F2C_LIBRARIES)
+    message(STATUS "Found f2c libraries ${F2C_LIBRARIES}")
+    set(F2C_FOUND_LIBS TRUE)
+else()
+    find_library(F2C_LIBRARIES f2c)
+    if(F2C_LIBRARIES)
+        message(STATUS "Found f2c libraries ${F2C_LIBRARIES}")
+        set(F2C_FOUND_LIBS TRUE)
+    endif()
+endif()
+
+if(F2C_FOUND_LIBS)
+    set(F2C_FOUND TRUE)
+else()
+    message(STATUS "F2C: Cound not find f2c. Try setting F2C env var.")
+endif()

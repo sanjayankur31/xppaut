@@ -1,0 +1,2 @@
+#define xppaut_MAJOR_VERSION @xppaut_VERSION_MAJOR@
+#define xppaut_MINOR_VERSION @xppaut_VERSION_MINOR@

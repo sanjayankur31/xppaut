@@ -3,6 +3,7 @@
 
 
 #include <stdio.h>
+#include "numerics.h"
 
 typedef struct {
 		float x,y,z;
@@ -43,5 +44,6 @@ void triangle_contour(Pt p1, Pt p2, Pt p3);
 void do_cline(int ngrid, double x1, double y1, double x2, double y2);
 void do_batch_nclines();
 void do_batch_dfield();
+void set_colorization_stuff();
 
 #endif

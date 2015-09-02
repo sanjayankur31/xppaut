@@ -5,6 +5,7 @@
 #include "lunch-new.h"
 #include <stdlib.h> 
 #include <string.h>
+#include "xppautConfig.h"
 /* command-line stuff for xpp */
 #include <stdio.h>
 #define NCMD 44 /* add new commands as needed  */
@@ -53,6 +54,9 @@
 #define DEFINE 41
 #define READSET 42
 #define WITH 43
+
+#define cstringmaj xppaut_MAJOR_VERSION
+#define cstringmin xppaut_MINOR_VERSION
 
 extern OptionsSet notAlreadySet;
 
@@ -406,7 +410,7 @@ int argc;
      i++;
    }
    if(k==23){
-     printf("XPPAUT Version %g.%g\nCopyright 2015 Bard Ermentrout\n",(float)MYSTR1,(float)MYSTR2);
+     printf("XPPAUT Version %g.%g\nCopyright 2015 Bard Ermentrout\n",(float)cstringmaj,(float)cstringmin);
      exit(0);
    }
    if(k==24){

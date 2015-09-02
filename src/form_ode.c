@@ -36,6 +36,7 @@
 #include "my_pars.h"
 #include "shoot.h"
 #include "newpars.h"
+#include "xppautConfig.h"
 
 #define MAXONLY 1000
 
@@ -97,8 +98,8 @@ int NCON_START,NSYM_START;
  int BVP_NL,BVP_NR,BVP_N;
  extern int BVP_FLAG;
 
-#define cstringmaj MYSTR1
-#define cstringmin MYSTR2
+#define cstringmaj xppaut_MAJOR_VERSION
+#define cstringmin xppaut_MINOR_VERSION
 extern float xppvermaj,xppvermin; 
 
 int ConvertStyle=0;

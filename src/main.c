@@ -94,9 +94,10 @@
 #define BIG_ENOUGH 1
 
 #include "myfonts.h"
+#include "xppautConfig.h"
 
-#define cstringmaj MYSTR1
-#define cstringmin MYSTR2
+#define cstringmaj xppaut_MAJOR_VERSION
+#define cstringmin xppaut_MINOR_VERSION
 
 #ifdef NOERRNO
 int errno;

@@ -1,0 +1,5 @@
+FILE(GLOB xppaut_SRC "*.h" "*.c" "*.bitmap")
+add_executable(xppaut ${xppaut_SRC})
+
+TARGET_LINK_LIBRARIES(xppaut ${SUNDIALS_LIBRARIES} ${X11_LIBRARIES})
+TARGET_INCLUDE_DIRECTORIES(xppaut PUBLIC ${SUNDIALS_INCLUDE_DIR} ${X11_INCLUDE_DIR})
