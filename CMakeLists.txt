@@ -18,7 +18,8 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 find_package(X11 REQUIRED)
 find_package(SUNDIALS REQUIRED)
-find_package(F2C REQUIRED)
+#cannot use system library unti a static library is available
+#find_package(F2C REQUIRED)
 find_package(SBML REQUIRED)
 
 ADD_SUBDIRECTORY(src)
