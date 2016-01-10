@@ -402,6 +402,9 @@ int argc;
   */
   
   do_comline(argc, argv);
+
+  
+
   /*We need to init_X here if there is no file on command line
   so that a file browser can be opened.
   */
@@ -414,8 +417,8 @@ int argc;
        /*Initialize what's needed to open a browser based on 
        the current options.
        */
-       do_vis_env();
-       set_all_vals();
+       do_vis_env(); 
+	 set_all_vals(); 
        init_X();
        /*       XSynchronize(display,1); */
        /*
@@ -434,8 +437,7 @@ int argc;
   free(tempNS);
   
   init_alloc_info();
-  do_vis_env();
-  
+      do_vis_env();
   set_all_vals();
   
  
@@ -486,9 +488,11 @@ if(XPPBatch){
      if_needed_select_sets();
      if_needed_load_ext_options();
      set_extra_graphs();
-       set_colorization_stuff();
+     set_colorization_stuff();
 
     batch_integrate();
+    silent_nullclines();
+    silent_dfields();
     exit(0);
   }
 

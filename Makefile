@@ -201,7 +201,7 @@ tarfile:
 	tar zcvf xppaut$(VERSION).tgz $(SOURCES) $(HEADERS) $(BITMAPS) default.opt \
 	 xpp_doc.tex README Makefile.old Makefile Makefile.64 Makefile.nice  Makefile.lib Makefile.avi Makefile.old Makefile.w7b \
 	ode/*.*  tstauto/*.ode cuda/README cuda/*.* canonical/*.* xpp_doc.pdf xpp_sum.tex xpp_sum.pdf  xpp_doc.tex tree.tex tree.pdf  \
-	xppaut.1\
+	xppaut.1 install*.html\
         help/*.html \
 	help/odes/*.ode help/odes/*.c install.pdf install.tex LICENSE HISTORY \
 	Makefile.s2x sbml2xpp.c *.xbm *.jar changes.txt \
