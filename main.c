@@ -983,15 +983,9 @@ void xpp_events(XEvent report,int min_wid,int min_hgt)
 	  break;
 	  }
 	  break; */
- case Expose:
- case MapNotify:
  
-	if(report.xany.window==command_pop)put_command("Command:");
-     do_expose(report);
-
-
-   break;
- case ConfigureNotify:
+ case ConfigureNotify: /* this needs to be fixed!!! */
+   /*    printf("CN %ld \n",report.xany.window); */
   resize_par_box(report.xany.window);  
   resize_my_browser(report.xany.window);
    resize_eq_list(report.xany.window);
@@ -1015,7 +1009,14 @@ void xpp_events(XEvent report,int min_wid,int min_hgt)
   }
 
   break;
+ case Expose:
+ case MapNotify:
+   /*  printf("E %ld \n",report.xany.window); */
+	if(report.xany.window==command_pop)put_command("Command:");
+     do_expose(report);
 
+
+   break;
  case KeyPress:
    used=0;
                 box_keypress(report,&used);
@@ -1059,6 +1060,7 @@ void xpp_events(XEvent report,int min_wid,int min_hgt)
    do_motion_events(report);
    break;
  case ButtonRelease:
+
     slide_release(report.xbutton.window);
 
     break;

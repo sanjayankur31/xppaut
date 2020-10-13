@@ -1,4 +1,4 @@
-# Copyright (C) 1990-2015 Bard Ermentrout & Daniel Dougherty & Robert McDougal
+# Copyright (C) 1990-2016 Bard Ermentrout & Daniel Dougherty & Robert McDougal
 # Edited for Debian GNU/Linux.
 #BINDIR = /usr/X11R6/bin
 DESTDIR =
